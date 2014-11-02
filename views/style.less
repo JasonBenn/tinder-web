@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Droid Sans', sans-serif;
+  margin: 40px auto;
+  width: 1200px;
+  display: flex;
+}
+
+.sidebar {
+  width: 220px;
+  padding: 30px;
+  border: 1px solid black;
+  margin-right: 20px;
+
+  li {
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 15px;
+
+    input {
+      float: right;
+    }
+  }
+}
+
+.main {
+  .girl {
+    height: 212px;
+    margin-bottom: 18px;
+    display: flex;
+  }
+
+  .meta {
+    width: 270px;
+  }
+
+  .pictures {
+    display: flex;
+
+    img {
+      border: 1px solid black;
+      background-color: gray;
+    }
+
+    .main img {
+      width: 212px;
+      height: 212px;
+      margin-right: 20px;
+    }
+
+    .others {
+      width: 106px;
+      overflow-y: scroll;
+
+      img {
+        width: 106px;
+        height: 106px;
+      }
+    }
+  }
+
+  .chat {
+    width: 300px;
+    margin-left: 20px;
+    border: 1px solid black;
+    background-color: gray;
+  }
+}
+
+
+li {
+  list-style-type: none;
+}
