@@ -26,6 +26,10 @@ GEM
       tilt
     hitimes (1.2.2)
     http_parser.rb (0.6.0)
+    httparty (0.13.1)
+      json (~> 1.8)
+      multi_xml (>= 0.5.2)
+    json (1.8.1)
     less (2.4.0)
       commonjs (~> 0.2.7)
     libv8 (3.16.14.3)
@@ -36,6 +40,7 @@ GEM
     lumberjack (1.0.9)
     method_source (0.8.2)
     multi_json (1.7.6)
+    multi_xml (0.5.5)
     pry (0.10.1)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -72,6 +77,9 @@ GEM
     tilt (1.4.1)
     timers (4.0.1)
       hitimes
+    tinder_pyro (0.0.1)
+      httparty (~> 0.3)
+      json (~> 1.6)
 
 PLATFORMS
   ruby
@@ -80,7 +88,9 @@ DEPENDENCIES
   guard-livereload
   haml
   less
+  pry
   puma
   sinatra
   sinatra-reloader
   therubyracer
+  tinder_pyro

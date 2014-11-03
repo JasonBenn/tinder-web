@@ -1,3 +1,6 @@
+fb_auth.yaml
+json/
+
 # Compiled source #
 ###################
 *.com
@@ -36,7 +39,3 @@
 Icon?
 ehthumbs.db
 Thumbs.db
-
-# Cached #
-##########
-.sass-cache/

@@ -1,0 +1,22 @@
+{
+  "name": "tinder",
+  "version": "0.0.0",
+  "authors": [
+    "Jason Benn <jasoncbenn@gmail.com>"
+  ],
+  "description": "tinder utils",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "latest",
+    "magnific-popup": "latest",
+    "normalize.css": "latest"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ]
+}
