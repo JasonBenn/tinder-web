@@ -16,12 +16,20 @@ body {
   margin-right: 20px;
 
   li {
+    display: flex;
+    align-items: center;
     font-size: 18px;
     line-height: 25px;
     margin-bottom: 15px;
 
+    img {
+      width: 30px;
+      height: 30px;
+      margin-right: 20px;
+    }
+
     input {
-      float: right;
+      margin-left: auto;
     }
   }
 }
@@ -42,7 +50,6 @@ body {
 
     img {
       border: 1px solid black;
-      background-color: gray;
     }
 
     .main img {
@@ -73,4 +80,49 @@ body {
 
 li {
   list-style-type: none;
+}
+
+
+
+// Lightbox animation
+
+.mfp-move-horizontal {
+  
+  /* start state */
+  .mfp-with-anim {
+    opacity: 0;
+    transition: all 0.3s;
+    
+    transform: translateX(-50px);
+  }
+  
+  &.mfp-bg {
+    opacity: 0;
+    transition: all 0.3s;
+  }
+  
+  /* animate in */
+  &.mfp-ready {
+    .mfp-with-anim {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    &.mfp-bg {
+      opacity: 0.8;
+    }
+  }
+  
+  /* animate out */
+  &.mfp-removing {
+    
+    .mfp-with-anim {
+      transform: translateX(50px);
+      opacity: 0;
+    }
+    &.mfp-bg {
+      opacity: 0;
+    }
+    
+  }
+  
 }

@@ -1,13 +1,16 @@
 !!! 5
 %html{ lang: 'en' }
   %head
-    %title Untitled App
+    %title Tinder Web
     %meta{ charset: 'utf-8' }
 
-    %link{ href: 'normalize.css', rel: 'stylesheet' }
-    %link{ href: '/style.css', rel: 'stylesheet' }
+    %link{ href: 'vendor/normalize.css/normalize.css', rel: 'stylesheet' }
+    %link{ href: 'style.css', rel: 'stylesheet' }
+    %link{ href: 'vendor/magnific-popup/dist/magnific-popup.css', rel: 'stylesheet' }
     %link{ href: 'http://fonts.googleapis.com/css?family=Droid+Sans:400,700', rel: 'stylesheet', type: 'text/css' }
-    %script{ src: '/application.js' }
 
   %body
     = yield
+    %script{ src: 'vendor/jquery/dist/jquery.min.js' }
+    %script{ src: 'vendor/magnific-popup/dist/jquery.magnific-popup.min.js' }
+    %script{ src: 'application.js' }

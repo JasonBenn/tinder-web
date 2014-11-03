@@ -1,23 +1,24 @@
 .sidebar
   %ul
-  - 15.times do
+  - @matches.each do |girl|
     %li
-      Maria
+      %img{ src: girl['photos'][0]['url'] }
+      = girl['name']
       %input{ type: 'checkbox' }
 
 .main
-  - 5.times do
+  - @online.each do |girl|
     .girl
       .meta
-        %h2 Jessica, 24
-        %h3 3 minutes ago
-        .profile Christian medical device sales. Must know the difference between your and you're. Let's be honest though... The puppy is the selling point.
+        %h2= [girl['name'], girl['age']].join(', ')
+        %h3= girl['last_active']
+        .profile= girl['bio']
       .pictures
         .main
-          %img{src: ''}
+          %a.photo{href: girl['photos'][0]['url'], title: girl['name'], data: {effect: "mfp-move-horizontal"}}
+            %img{src: girl['photos'][0]['url']}
         .others
-          %img{src: ''}
-          %img{src: ''}
-          %img{src: ''}
-          %img{src: ''}
+          - girl['photos'][1..-1].each do |photo|
+            %a.photo{href: photo['url'], title: girl['name']}
+              %img{src: photo['url']}
       .chat
